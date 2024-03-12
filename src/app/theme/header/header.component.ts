@@ -21,7 +21,6 @@ export class HeaderComponent {
   @Input() showBranding = false;
 
   @Output() toggleSidenav = new EventEmitter<void>();
-  @Output() toggleSidenavNotice = new EventEmitter<void>();
 
   toggleFullscreen() {
     if (screenfull.isEnabled) {
