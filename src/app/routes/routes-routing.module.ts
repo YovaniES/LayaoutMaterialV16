@@ -28,10 +28,10 @@ const routes: Routes = [
         path: 'material',
         loadChildren: () => import('./material/material.module').then(m => m.MaterialModule),
       },
-      {
-        path: 'media',
-        loadChildren: () => import('./media/media.module').then(m => m.MediaModule),
-      },
+      // {
+      //   path: 'media',
+      //   loadChildren: () => import('./media/media.module').then(m => m.MediaModule),
+      // },
       {
         path: 'forms',
         loadChildren: () => import('./forms/forms.module').then(m => m.FormsModule),
