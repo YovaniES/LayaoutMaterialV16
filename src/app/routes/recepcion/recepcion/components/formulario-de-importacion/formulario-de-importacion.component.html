@@ -1,0 +1,9 @@
+<button
+  mat-raised-button
+  color="primary"
+  (click)="filePicker.click()"
+  class="but-importar">
+  <mat-icon color="secondary">upload_file</mat-icon>
+  Importar
+</button>
+<input #filePicker type="file" (change)="fileChange($event)" accept=".xlsx" style="display: none;">

@@ -1,0 +1,55 @@
+<!-- <div style="text-align: left;">
+  <h4>DOCUMENTOS</h4>
+</div> -->
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>DOCUMENTOS</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <table mat-table [dataSource]="dataSourceDocuments">
+      <ng-container matColumnDef="serie_documental">
+        <th mat-header-cell *matHeaderCellDef>Serie Documental</th>
+        <td mat-cell *matCellDef="let row;">{{row.numSerieDocu}}</td>
+      </ng-container>
+      <ng-container matColumnDef="microforma">
+        <th mat-header-cell *matHeaderCellDef>Microforma</th>
+        <td mat-cell *matCellDef="let row;">{{row.microforma}}</td>
+      </ng-container>
+      <ng-container matColumnDef="estado">
+        <th mat-header-cell *matHeaderCellDef>Estado</th>
+        <td mat-cell *matCellDef="let row;">{{row.estado}}</td>
+      </ng-container>
+      <ng-container matColumnDef="observaciones">
+        <th mat-header-cell *matHeaderCellDef>Observaciones</th>
+        <td mat-cell *matCellDef="let row;">
+          <button mat-button
+            (click)="openFormObs(row)">
+            <mat-icon class="mat-icon-obs" *ngIf="!row.haveObs" color="primary">note_add</mat-icon>
+            <mat-icon class="mat-icon-obs" *ngIf="row.haveObs" color="warn">note_add</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="urgente">
+        <th mat-header-cell *matHeaderCellDef>Urgente</th>
+        <td mat-cell *matCellDef="let row;">
+          <mat-checkbox
+            [(ngModel)] = "row.urgent"
+            (click)="openFormUrgent(row)">
+          </mat-checkbox>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="rechazo">
+        <th mat-header-cell *matHeaderCellDef>Rechazo</th>
+        <td mat-cell *matCellDef="let row;">
+          <mat-checkbox
+            [(ngModel)] = 'row.reject'
+            (click)="openFormReject(row)">
+          </mat-checkbox>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </mat-card-content>
+</mat-card>
+

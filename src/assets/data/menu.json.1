@@ -1,0 +1,376 @@
+{
+  "menu": [
+    {
+      "route": "home",
+      "name": "home",
+      "type": "link",
+      "icon": "home"
+    },
+
+    {
+      "route": "sistema",
+      "name": "Sistema",
+      "type": "sub",
+      "icon": "dashboard",
+      "children": [
+        {
+          "route": "asignacion-de-permisos",
+          "name": "Asignación de Permisos",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "acceso-a-empresas",
+          "name": "Acceso a Empresas",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "cambiar-clave",
+          "name": "Cambiar Clave",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "administracion-de-contrasenas",
+          "name": "Administración de Contraseñas",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "cerrar-sesion",
+          "name": "Cerrar Sesión",
+          "type": "link",
+          "icon": "dashboard"
+        }
+      ],
+      "permissions": {
+        "except": [
+          "MANAGER",
+          "GUEST"
+        ]
+      }
+    },
+    {
+      "route": "configuracion",
+      "name": "Configuración",
+      "type": "sub",
+      "icon": "dashboard",
+      "children": [
+        {
+          "route": "empresa",
+          "name": "Empresa",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "perfil-de-usuario",
+          "name": "Perfil de Usuario",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "usuarios",
+          "name": "Usuarios",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "modalidad-de-recepcion",
+          "name": "Modalidad de Recepción",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "area-de-origen",
+          "name": "Área de Origen",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "turnos",
+          "name": "Turnos",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "series-documentales",
+          "name": "Series Documentales",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "clave-de-indexacion",
+          "name": "Clave de Indexación",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "formato-de-digitacion",
+          "name": "Formato de Digitación",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "parametriza-escanner",
+          "name": "Parametriza Escanner",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "definir-tipo-de-documento",
+          "name": "Definir Tipo de Documento",
+          "type": "link",
+          "icon": "dashboard"
+        }
+      ],
+      "permissions": {
+        "except": [
+          "MANAGER",
+          "GUEST"
+        ]
+      }
+    },
+    {
+      "route": "registro",
+      "name": "Registro",
+      "type": "sub",
+      "icon": "dashboard",
+      "children": [
+        {
+          "route" : "recepcion",
+          "name" : "Recepcion",
+          "type" : "link",
+          "icon" : "dashboard"
+        },
+        {
+          "route" : "inventario",
+          "name" : "Inventario",
+          "type" : "link",
+          "icon" : "dashboard"
+        }
+      ]
+    },
+    {
+      "route": "preparacion",
+      "name": "Preparación",
+      "type": "link",
+      "icon": "dashboard",
+      "permissions": {
+        "except": [
+          "MANAGER",
+          "GUEST"
+        ]
+      }
+    },
+    {
+      "route": "digitalizacion",
+      "name": "Digitalización",
+      "type": "sub",
+      "icon": "dashboard",
+      "children": [
+        {
+          "route": "captacion-de-imagenes",
+          "name": "Captación de Imágenes",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "digitalizacion",
+          "name": "Digitalización",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "carga-externa",
+          "name": "Carga Externa",
+          "type": "link",
+          "icon": "dashboard"
+        }
+      ],
+      "permissions": {
+        "except": [
+          "MANAGER",
+          "GUEST"
+        ]
+      }
+    },
+    {
+      "route": "indexacion",
+      "name": "Indexación",
+      "type": "sub",
+      "icon": "dashboard",
+      "children": [
+        {
+          "route": "indexacion",
+          "name": "Indexación",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "indexacion-de-reprocesados",
+          "name": "Indexación de Reprocesados",
+          "type": "link",
+          "icon": "dashboard"
+        }
+      ],
+      "permissions": {
+        "except": [
+          "MANAGER",
+          "GUEST"
+        ]
+      }
+    },
+    {
+      "route": "digitacion",
+      "name": "Digitación",
+      "type": "link",
+      "icon": "dashboard",
+      "permissions": {
+        "except": [
+          "MANAGER",
+          "GUEST"
+        ]
+      }
+    },
+    {
+      "route": "control-de-calidad",
+      "name": "Control de Calidad",
+      "type": "sub",
+      "icon": "dashboard",
+      "children": [
+        {
+          "route": "control-calidad-documentos",
+          "name": "Control Calidad Documentos",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "control-de-calidad-digitacion",
+          "name": "Control de Calidad Digitación",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "control-calidad-medio-optico",
+          "name": "Control Calidad Medio Óptico",
+          "type": "link",
+          "icon": "dashboard"
+        }
+      ],
+      "permissions": {
+        "except": [
+          "MANAGER",
+          "GUEST"
+        ]
+      }
+    },
+    {
+      "route": "autentificacion-de-fedatario",
+      "name": "Autentificación de Fedatario",
+      "type": "link",
+      "icon": "dashboard",
+      "permissions": {
+        "except": [
+          "MANAGER",
+          "GUEST"
+        ]
+      }
+    },
+    {
+      "route": "armado",
+      "name": "Armado",
+      "type": "link",
+      "icon": "dashboard",
+      "permissions": {
+        "except": [
+          "MANAGER",
+          "GUEST"
+        ]
+      }
+    },
+    {
+      "route": "devolucion",
+      "name": "Devolución",
+      "type": "sub",
+      "icon": "dashboard",
+      "children": [
+        {
+          "route": "devolucion",
+          "name": "Devolución",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "rechazo",
+          "name": "Rechazo",
+          "type": "link",
+          "icon": "dashboard"
+        }
+      ],
+      "permissions": {
+        "except": [
+          "MANAGER",
+          "GUEST"
+        ]
+      }
+    },
+    {
+      "route": "generacion-de-medios-opticos",
+      "name": "Generación de Medios Ópticos",
+      "type": "link",
+      "icon": "dashboard",
+      "permissions": {
+        "except": [
+          "MANAGER",
+          "GUEST"
+        ]
+      }
+    },
+    {
+      "route": "reporte",
+      "name": "Reporte",
+      "type": "sub",
+      "icon": "dashboard",
+      "children": [
+        {
+          "route": "log-sistema",
+          "name": "Log Sistema",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "reporte-de-envios",
+          "name": "Reporte de Envios",
+          "type": "link",
+          "icon": "dashboard"
+        },
+        {
+          "route": "informe-produccion",
+          "name": "Informe Producción",
+          "type": "link",
+          "icon": "dashboard"
+        }
+      ],
+      "permissions": {
+        "except": [
+          "MANAGER",
+          "GUEST"
+        ]
+      }
+    },
+    {
+      "route": "monitoreo",
+      "name": "Monitoreo",
+      "type": "link",
+      "icon": "dashboard",
+      "permissions": {
+        "except": [
+          "MANAGER",
+          "GUEST"
+        ]
+      }
+    }
+
+  ]
+}

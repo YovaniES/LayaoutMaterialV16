@@ -1,0 +1,53 @@
+@use '../style/variables';
+@use '../style/breakpoints';
+
+.matero-sidebar-header {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: variables.$toolbar-height-desktop;
+  padding: 0 8px;
+  overflow: hidden;
+
+  @include breakpoints.bp-lt(small) {
+    & {
+      height: variables.$toolbar-height-mobile;
+    }
+  }
+
+  // Colorful
+  .matero-header-white & {
+    background-color: white;
+    //background-color: #004254;//add
+  }
+}
+
+.matero-sidebar-main {
+  height: calc(100% - #{variables.$toolbar-height-desktop});
+  overflow: auto;
+
+  @include breakpoints.bp-lt(small) {
+    & {
+      height: calc(100% - #{variables.$toolbar-height-mobile});
+    }
+  }
+}
+
+//add
+.mat-mdc-slide-toggle.mat-accent {
+  --mdc-switch-selected-focus-state-layer-color: #004254;
+  --mdc-switch-selected-handle-color: #004254;
+  --mdc-switch-selected-hover-state-layer-color: #004254;
+  --mdc-switch-selected-pressed-state-layer-color: #004254;
+  --mdc-switch-selected-focus-handle-color: #004254;
+  --mdc-switch-selected-hover-handle-color: #004254;
+  --mdc-switch-selected-pressed-handle-color: #004254;
+  --mdc-switch-selected-focus-track-color: #03657C;
+  --mdc-switch-selected-hover-track-color: #03657C;
+  --mdc-switch-selected-pressed-track-color: #03657C;
+  --mdc-switch-selected-track-color: #03657C;
+}

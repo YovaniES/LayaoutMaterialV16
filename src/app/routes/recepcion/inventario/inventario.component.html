@@ -1,0 +1,89 @@
+<page-header title=" " subtitle=" " class="encabezado "></page-header>
+<mat-card class="card-container" align="center">
+  <mat-card-content>
+        <mat-form-field class="m-r-8" appearance="outline" style="width: 100%;">
+          <mat-label>Código Caja</mat-label>
+          <input
+            matInput
+            placeholder ="Código"
+            (keyup.enter)="obtainIdBox(txtInput.value)"
+            #txtInput>
+        </mat-form-field>
+    </mat-card-content>
+</mat-card>
+
+
+  <mat-card class="card-container" *ngIf="!disabledButton">
+  <mat-card-content>
+    <table mat-table [dataSource]="dataSourceInventario" style="width: 10%;">
+      <ng-container matColumnDef="numCaja">
+        <th mat-header-cell *matHeaderCellDef>Caja</th>
+        <td mat-cell *matCellDef="let row">{{row.numCaja}}</td>
+      </ng-container>
+      <ng-container matColumnDef="idAnaquel">
+        <th mat-header-cell *matHeaderCellDef>Anaquel</th>
+        <td mat-cell *matCellDef="let row">
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>{{'Anaquel'}}</mat-label>
+            <input
+              matInput (keyup)="keyUpInput($event, row.idEmpaque, 'anaquel')"
+              [value]="row.idAnaquel">
+          </mat-form-field>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="lado">
+        <th mat-header-cell *matHeaderCellDef>Lado</th>
+        <td mat-cell *matCellDef="let row">
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Lado</mat-label>
+            <input matInput (keyup)="keyUpInput($event, row.idEmpaque, 'lado')"
+              [value]="row.lado">
+          </mat-form-field>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="idFila">
+        <th mat-header-cell *matHeaderCellDef>Fila</th>
+        <td mat-cell *matCellDef="let row">
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Fila</mat-label>
+            <input matInput (keyup)="keyUpInput($event, row.idEmpaque, 'fila')"
+              [value]="row.idFila">
+          </mat-form-field>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="idColumna">
+        <th mat-header-cell *matHeaderCellDef>Columna</th>
+        <td mat-cell *matCellDef="let row">
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>Columna</mat-label>
+            <input matInput (keyup)="keyUpInput($event, row.idEmpaque, 'columna')"
+              [value]="row.idColumna">
+          </mat-form-field>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="eliminar">
+        <th mat-header-cell *matHeaderCellDef>Eliminar</th>
+        <td mat-cell *matCellDef="let row">
+          <button mat-button (click)="deleteRowBox(row)">
+            <mat-icon color="primary">delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+  </mat-card-content>
+</mat-card>
+
+
+  <mat-card-content *ngIf="!disabledButton">
+    <div align="right">
+      <button
+      mat-raised-button color="primary"
+      *ngIf="disabledButton !== undefined"
+      [disabled]="disabledButton"
+      (click)="finishProcess()"
+      >REGISTRAR</button>
+    </div>
+  </mat-card-content>

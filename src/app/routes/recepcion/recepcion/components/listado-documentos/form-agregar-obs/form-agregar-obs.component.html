@@ -1,0 +1,45 @@
+<h1 mat-dialog-title>Observaciones</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="outline" style="width: 100%; margin-top: 5px;">
+    <mat-label>Caja</mat-label>
+    <input matInput [readonly]="true" [(ngModel)]="data.document.numEmpaque">
+  </mat-form-field>
+  <mat-form-field appearance="outline" style="width: 100%">
+    <mat-label>Serie Documental</mat-label>
+    <input matInput [readonly]="true" [(ngModel)]="data.document.numSerieDocu">
+  </mat-form-field>
+  <mat-form-field appearance="outline" style="width: 100%">
+    <mat-label>Observaciones</mat-label>
+    <mat-select [(ngModel)]="selectedOption" (selectionChange)="addObsOption()">
+      <mat-option disabled>-- Ninguno --</mat-option>
+      <mat-option
+        *ngFor="let obs of catalogObs"
+        [value] = "obs">{{obs.descripcion}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<mat-dialog-content>
+  <mtx-grid
+  [data]="histObsbyDoc"
+  [columns]="columns"
+  [loading]="isLoading"
+  [columnResizable]="columnResizable"
+  [hideRowSelectionCheckbox]="hideRowSelectionCheckbox"
+  [rowHover]="rowHover"
+  [rowStriped]="rowStriped"
+  [columnSortable]="columnSortable"
+  [expandable]="expandable"
+  [pageOnFront]="showPaginator"
+  [showPaginator]="showPaginator"
+  [pageSize]="pageSize"
+  [pageSizeOptions]="pageSizeOptions"
+  >
+  </mtx-grid>
+</mat-dialog-content>
+
+
+<mat-dialog-actions align="end">
+  <button color="warn" mat-raised-button [mat-dialog-close]="false">Salir</button>
+  <!-- <button mat-raised-button [mat-dialog-close]="true"  color="primary">Guardar</button> -->
+</mat-dialog-actions>

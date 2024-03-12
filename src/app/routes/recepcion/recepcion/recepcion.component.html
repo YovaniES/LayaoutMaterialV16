@@ -1,0 +1,45 @@
+<page-header style="background-color: #11657A;"></page-header>
+<mat-card class="card-container" align="center">
+  <mat-card-content class="div-card-import">
+    <recepcion-formulario-de-importacion
+     (importExcel)="importExcel($event)" (response)="receiveResponseImportExcel($event)">
+    </recepcion-formulario-de-importacion>
+  </mat-card-content>
+
+  <mat-card-content >
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4" style="text-align: left;">
+            <h4>ORDEN: <strong color="primary">{{responseValue}}</strong></h4>
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-5">
+          <recepcion-registrar-documento (idDocumento)="registerDocument($event)" [dSArrDocuments]="dataSourceArrDocuments"></recepcion-registrar-documento>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+          <recepcion-series-pendientes [informationReceive]="informationReceive"></recepcion-series-pendientes>
+        </div>
+      </div>
+
+    </div>
+  </mat-card-content>
+
+  <mat-card-content >
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <recepcion-listado-cajas [arrBoxes]="dataSourceArrBoxes" ></recepcion-listado-cajas>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-8">
+          <recepcion-listado-documentos [dataSourceDocuments]="dataSourceArrDocuments" ></recepcion-listado-documentos>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+
+  <mat-card-content >
+    <div style="float: right;">
+    <button mat-raised-button color="primary" *ngIf="disableButton !== undefined" [disabled] = "disableButton" (click)="finishProcess(responseValue)"  >TERMINAR PROCESO</button>
+  </div>
+  </mat-card-content>
+</mat-card>
+

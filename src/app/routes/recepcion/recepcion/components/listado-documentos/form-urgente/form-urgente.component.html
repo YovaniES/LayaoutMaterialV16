@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Urgente</h1>
+
+<mat-dialog-content>
+  <mat-form-field appearance="outline" style="width: 100%; margin-top: 5px;">
+    <mat-label>Caja</mat-label>
+    <input matInput [readonly]="true" [(ngModel)]="data.document.numEmpaque">
+  </mat-form-field>
+  <mat-form-field appearance="outline" style="width: 100%">
+    <mat-label>Serie Documental</mat-label>
+    <input matInput [readonly]="true" [(ngModel)]="data.document.numSerieDocu">
+  </mat-form-field>
+  <mat-form-field appearance="outline" style="width: 100%;">
+    <mat-label>Usuario solicitante</mat-label>
+    <input matInput>
+  </mat-form-field>
+</mat-dialog-content>
+
+
+<mat-dialog-actions align="end">
+  <button
+    mat-raised-button
+    [mat-dialog-close]="false"
+    >Cancelar</button>
+  <button
+    mat-raised-button
+    [mat-dialog-close]="true"
+    cdkFocusInitial
+    color="primary"
+    (click)="saveUrgent()"
+    >Guardar</button>
+</mat-dialog-actions>
