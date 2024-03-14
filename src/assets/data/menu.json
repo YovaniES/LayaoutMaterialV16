@@ -294,29 +294,7 @@
         }
       ]
     },
-    {
-      "route": "forms",
-      "name": "forms",
-      "type": "sub",
-      "icon": "description",
-      "children": [
-        {
-          "route": "elements",
-          "name": "form-elements",
-          "type": "link"
-        },
 
-        {
-          "route": "select",
-          "name": "select",
-          "type": "link"
-        }
-
-      ],
-      "permissions": {
-        "except": "GUEST"
-      }
-    },
     {
       "route": "tables",
       "name": "tables",

@@ -29,10 +29,6 @@ const routes: Routes = [
         loadChildren: () => import('./material/material.module').then(m => m.MaterialModule),
       },
       {
-        path: 'forms',
-        loadChildren: () => import('./forms/forms.module').then(m => m.FormsModule),
-      },
-      {
         path: 'tables',
         loadChildren: () => import('./tables/tables.module').then(m => m.TablesModule),
       },

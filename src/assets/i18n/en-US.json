@@ -111,12 +111,9 @@
     "material.data-table.sort": "Sort",
     "material.data-table.table": "Table",
 
-    "forms": "Forms",
-    "forms.form-elements": "Form Elements",
-    "forms.select": "Select",
-
     "tables": "Tables",
     "tables.kitchen-sink": "Kitchen Sink",
+
     "tables.remote-data": "Remote Data",
     "profile": "Profile",
     "profile.overview": "Overview",
