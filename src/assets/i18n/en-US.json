@@ -110,11 +110,11 @@
     "material.data-table.paginator": "Paginator",
     "material.data-table.sort": "Sort",
     "material.data-table.table": "Table",
+
     "forms": "Forms",
     "forms.form-elements": "Form Elements",
-    "forms.dynamic-form": "Dynamic Form",
     "forms.select": "Select",
-    "forms.datetime": "Date Time",
+
     "tables": "Tables",
     "tables.kitchen-sink": "Kitchen Sink",
     "tables.remote-data": "Remote Data",

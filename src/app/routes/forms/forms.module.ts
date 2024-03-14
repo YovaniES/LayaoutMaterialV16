@@ -4,15 +4,11 @@ import { FormsRoutingModule } from './forms-routing.module';
 
 import { FormsElementsComponent } from './elements/elements.component';
 import { FormsSelectComponent } from './select/select.component';
-import { FormsDynamicComponent } from './dynamic/dynamic.component';
-import { FormsDatetimeComponent } from './datetime/datetime.component';
 import { FormsSelectEditComponent } from './select/edit/edit.component';
 
 const COMPONENTS: any[] = [
   FormsElementsComponent,
   FormsSelectComponent,
-  FormsDynamicComponent,
-  FormsDatetimeComponent,
 ];
 const COMPONENTS_DYNAMIC: any[] = [FormsSelectEditComponent];
 

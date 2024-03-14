@@ -305,21 +305,13 @@
           "name": "form-elements",
           "type": "link"
         },
-        {
-          "route": "dynamic",
-          "name": "dynamic-form",
-          "type": "link"
-        },
+
         {
           "route": "select",
           "name": "select",
           "type": "link"
-        },
-        {
-          "route": "datetime",
-          "name": "datetime",
-          "type": "link"
         }
+
       ],
       "permissions": {
         "except": "GUEST"
