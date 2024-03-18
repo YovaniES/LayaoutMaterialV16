@@ -29,10 +29,6 @@ const routes: Routes = [
         loadChildren: () => import('./material/material.module').then(m => m.MaterialModule),
       },
       {
-        path: 'tables',
-        loadChildren: () => import('./tables/tables.module').then(m => m.TablesModule),
-      },
-      {
         path: 'profile',
         loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule),
       },
@@ -40,10 +36,6 @@ const routes: Routes = [
         path: 'permissions',
         loadChildren: () =>
           import('./permissions/permissions.module').then(m => m.PermissionsModule),
-      },
-      {
-        path: 'utilities',
-        loadChildren: () => import('./utilities/utilities.module').then(m => m.UtilitiesModule),
       },
     ],
   },
