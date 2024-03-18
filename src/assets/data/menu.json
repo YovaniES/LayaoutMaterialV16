@@ -313,15 +313,6 @@
       ]
     },
     {
-      "route": "https://ng-matero.github.io/extensions/",
-      "name": "extensions",
-      "type": "extTabLink",
-      "icon": "extension",
-      "permissions": {
-        "only": "ADMIN"
-      }
-    },
-    {
       "route": "/",
       "name": "sessions",
       "type": "sub",
