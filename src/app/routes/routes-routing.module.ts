@@ -32,11 +32,6 @@ const routes: Routes = [
         path: 'profile',
         loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule),
       },
-      {
-        path: 'permissions',
-        loadChildren: () =>
-          import('./permissions/permissions.module').then(m => m.PermissionsModule),
-      },
     ],
   },
 

@@ -266,35 +266,6 @@
       }
     },
     {
-      "route": "permissions",
-      "name": "permissions",
-      "type": "sub",
-      "icon": "lock",
-      "children": [
-        {
-          "route": "role-switching",
-          "name": "role-switching",
-          "type": "link"
-        },
-        {
-          "route": "route-guard",
-          "name": "route-guard",
-          "type": "link",
-          "permissions": {
-            "except": "GUEST"
-          }
-        },
-        {
-          "route": "test",
-          "name": "test",
-          "type": "link",
-          "permissions": {
-            "only": "ADMIN"
-          }
-        }
-      ]
-    },
-    {
       "route": "profile",
       "name": "profile",
       "type": "sub",
